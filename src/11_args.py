@@ -32,6 +32,8 @@ print(f2(*a))    # Should print 22
 # arguments. Google "python default arguments" for a hint.
 
 # YOUR CODE HERE
+def f3(num1, num2=1):
+    return num1 + num2
 
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9
@@ -46,6 +48,10 @@ print(f3(8))     # Should print 9
 # Google "python keyword arguments".
 
 # YOUR CODE HERE
+
+def f4(**kwargs):
+    for k,v in kwargs.items():
+        print("key:", k, ", value:", v)
 
 # Should print
 # key: a, value: 12
@@ -64,4 +70,4 @@ d = {
 }
 
 # What thing do you have to add to make this work?
-f4(d)
+f4(**d)
