@@ -26,10 +26,10 @@ print(y)
 
 a = ["foo", "bar", "baz"]
 
-y = []
+y = [word.upper() for word in a]
 
-for word in a:
-    y.append(word.upper())
+# for word in a:
+#     y.append(word.upper())
 
 print(y)
 
@@ -40,10 +40,10 @@ x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
 # print("x", x)
-y = []
+y = [num for num in x if int(num) %2 == 0]
 
-for num in x:
-    if int(num) % 2 == 0:
-        y.append(num)
+# for num in x:
+#     if int(num) % 2 == 0:
+#         y.append(num)
 
 print(y)
