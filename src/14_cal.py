@@ -23,4 +23,25 @@ import sys
 import calendar
 from datetime import datetime
 
-class calendar.Calendar()
+user_input = sys.argv
+default_month = datetime.now().month
+default_year = datetime.now().year
+
+
+def cal_prog(month=default_month, year=default_year):
+  # print("year", year, "month", month)
+    print(calendar.month(year, month))
+  
+
+if len(sys.argv) == 1:
+    cal_prog()
+elif len(sys.argv) == 2:
+    if len(sys.argv[1]) <=2:
+        cal_prog(int(sys.argv[1]))
+    else:
+        print(f'Initialize file with format: <filename> <month as a number> <full year>')
+else:
+    if len(sys.argv[1]) <=2 and len(sys.argv[2]) == 4:
+        cal_prog(int(sys.argv[1]), int(sys.argv[2]))
+    else:
+        print(f'Initialize file with format: <filename> <month as a number> <full year>')
